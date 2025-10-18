@@ -1185,8 +1185,133 @@ section,
   margin: 0;
 }
 
+/* Tambahkan kode ini ke file CSS Anda */
+.image-wrapper {
+    position: relative; 
+    /* Atur min-height lebih tinggi dari gambar Anda. Sesuaikan nilainya! */
+    /* Misalnya, jika gambar Anda tinggi 300px, coba 380px. */
+    min-height: 270px; 
+    
+    /* PENTING: Pastikan tidak ada overflow: hidden; pada .image-wrapper atau .col-xl-6 */
+    overflow: visible; 
+}
+
 .about .image-wrapper {
   position: relative;
+}
+
+/* ====================================
+   Styling Dasar & Tipografi Baru
+   ==================================== */
+.achievement-section-new {
+    /* Wadah utama section */
+    padding: 40px 0; 
+    text-align: center; 
+    
+    /* PENAMBAHAN/MODIFIKASI UTAMA: Atur warna latar belakang menjadi putih */
+    background-color: white; /* Atau gunakan kode hex: #FFFFFF */
+}
+
+.container-new {
+    /* Wadah konten di tengah */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.section-title-new {
+    /* Styling untuk judul */
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+
+/* ====================================
+   Layout Flexbox (Desktop) Baru
+   ==================================== */
+.badge-container-new {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px; 
+}
+
+/* ====================================
+   Layout Badge Item yang Stabil
+   ==================================== */
+.badge-item-new {
+    /* Pertahankan Flexbox untuk susunan vertikal */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    
+    flex: 0 1 calc(100% / 7 - 20px); 
+    max-width: 150px; 
+    margin-bottom: 20px;
+    
+    /* Hapus properti 'height' di sini agar wadah bisa tumbuh */
+}
+
+.badge-item-new img {
+    /* PENTING: Kunci tinggi gambar di sini! */
+    height: 150px; /* Tetapkan tinggi yang diinginkan, misal 120px */
+    width: 150px;  /* Atur lebar yang sama jika Anda ingin bentuk kotak */
+    
+    /* Properti penyesuaian gambar */
+    object-fit: contain; 
+    display: block;
+    margin-bottom: 5px; /* Jarak antara gambar dan teks */
+    
+    /* Hapus max-height: 100%; dan max-width: 100%; karena kita sudah mengatur dimensi tetap */
+}
+
+/* ====================================
+   Styling Tulisan Kecil
+   ==================================== */
+.badge-caption-new {
+    font-size: 1em; 
+    color: #555;      
+    margin: 0;        
+    line-height: 1.2;
+    padding: 0 5px;
+    font-weight: 500; 
+}
+
+/* ====================================
+   Responsive Styling Baru (Media Queries)
+   ==================================== */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .badge-item-new {
+        /* 4 badge per baris */
+        flex: 0 1 calc(25% - 20px); 
+        max-width: 200px;
+    }
+}
+
+/* Handphone Kecil (max-width: 600px) */
+@media (max-width: 600px) {
+    .section-title-new {
+        font-size: 2em;
+    }
+    
+    .badge-item-new {
+        /* 3 badge per baris */
+        flex: 0 1 calc(33.333% - 20px); 
+        max-width: 120px; 
+    }
+}
+
+/* Handphone Sangat Kecil (max-width: 400px) */
+@media (max-width: 400px) {
+    .badge-item-new {
+        /* 2 badge per baris */
+        flex: 0 1 calc(50% - 20px); 
+        max-width: 150px; 
+    }
 }
 
 @media (max-width: 992px) {
@@ -1242,6 +1367,8 @@ section,
   min-width: 200px;
   animation: experience-float 3s ease-in-out infinite;
 }
+
+
 
 @media (max-width: 992px) {
   .about .image-wrapper .experience-badge {
@@ -1744,6 +1871,7 @@ section,
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out;
+    
 }
 
 .profile-card:hover {
@@ -1754,7 +1882,7 @@ section,
 /* Styling Khusus untuk Foto Profil */
 .profile-img {
     /* Membuat gambar melingkar sempurna */
-    border-radius: 50%;
+    border-radius: 5%;
     
     /* Mengatur ukuran foto */
     width: 150px; 
@@ -1764,10 +1892,8 @@ section,
     object-fit: cover; 
     
     /* Memberikan jarak bawah dan memastikan di tengah */
-    margin-bottom: 15px;
-    margin-left: auto; /* Penting untuk di tengah */
-    margin-right: auto; /* Penting untuk di tengah */
-    display: block; /* Penting agar margin auto berfungsi */
+    margin: 0 auto 20px auto; 
+    display: block;
     
     /* Tambahan estetika */
     border: 4px solid #ffffff; /* Border hijau modern */
