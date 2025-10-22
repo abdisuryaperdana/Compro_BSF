@@ -1916,6 +1916,112 @@ section,
     margin-bottom: 0;
 }
 
+.layanan-wrapper {
+  background-color: #ffffff;
+  padding: 40px 30px 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* --- Judul section --- */
+.layanan-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.layanan-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #f6c400, #e63946);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Section isi kartu --- */
+.layanan-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* --- Kartu --- */
+.layanan-card {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fdfdfd;
+  border-left: 5px solid;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.layanan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.layanan-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+}
+
+.layanan-text h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.layanan-text p {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.layanan-content i {
+  font-size: 34px;
+}
+
+/* --- Warna aksen --- */
+.card-blue {
+  border-left-color: #007bff;
+}
+.card-blue i {
+  color: #007bff;
+}
+
+.card-yellow {
+  border-left-color: #f6c400;
+}
+.card-yellow i {
+  color: #f6c400;
+}
+
+.card-red {
+  border-left-color: #e63946;
+}
+.card-red i {
+  color: #e63946;
+}
+
+/* --- Responsif --- */
+@media (max-width: 768px) {
+  .layanan-section {
+    flex-direction: column;
+  }
+}
+
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
